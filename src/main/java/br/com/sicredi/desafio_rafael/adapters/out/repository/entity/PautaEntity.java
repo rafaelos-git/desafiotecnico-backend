@@ -12,6 +12,6 @@ import java.util.List;
 public class PautaEntity {
     @Id
     private String id;
+    private String nome;
     private String descricao;
-    private List<Voto> votos;
 }

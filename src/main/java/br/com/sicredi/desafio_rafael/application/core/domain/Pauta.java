@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Pauta {
     private String id;
+    private String nome;
     private String descricao;
-    private List<Voto> votos;
 
     public Pauta() {
-        this.votos = new ArrayList<>();
+
     }
 
     public String getId() {
@@ -20,19 +20,19 @@ public class Pauta {
         this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public String getDescricao() {
         return descricao;
     }
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public List<Voto> getVotos() {
-        return votos;
-    }
-
-    public void setVotos(List<Voto> votos) {
-        this.votos = votos;
     }
 }

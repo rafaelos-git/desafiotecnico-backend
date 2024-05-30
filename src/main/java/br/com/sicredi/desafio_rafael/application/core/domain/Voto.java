@@ -1,15 +1,22 @@
 package br.com.sicredi.desafio_rafael.application.core.domain;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
 public class Voto {
-    private Long idAssociado;
+    @Id
+    private String id;
+    @DBRef
+    private SessaoVotacao sessaoVotacao;
+    private String associadoId;
     private boolean voto;
 
-    public Long getIdAssociado() {
-        return idAssociado;
+    public String getIdAssociado() {
+        return associadoId;
     }
 
-    public void setIdAssociado(Long idAssociado) {
-        this.idAssociado = idAssociado;
+    public void setIdAssociado(String associadoId) {
+        this.associadoId = associadoId;
     }
 
     public boolean isVoto() {

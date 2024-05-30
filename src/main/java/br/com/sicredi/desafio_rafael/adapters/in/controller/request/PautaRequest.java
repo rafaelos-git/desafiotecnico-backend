@@ -6,5 +6,7 @@ import lombok.Data;
 @Data
 public class PautaRequest {
     @NotBlank
+    private String nome;
+    @NotBlank
     private String descricao;
 }
