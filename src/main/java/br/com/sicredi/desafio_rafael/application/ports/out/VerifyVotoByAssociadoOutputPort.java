@@ -4,5 +4,5 @@ import br.com.sicredi.desafio_rafael.application.core.domain.SessaoVotacao;
 import br.com.sicredi.desafio_rafael.application.core.domain.Voto;
 
 public interface VerifyVotoByAssociadoOutputPort {
-    boolean find(SessaoVotacao sessaoVotacao, String cpfAssociado);
+    boolean find(String sessaoId, String cpfAssociado);
 }

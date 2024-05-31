@@ -6,8 +6,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 public class Voto {
     @Id
     private String id;
-    @DBRef
-    private SessaoVotacao sessaoVotacao;
+    private String sessaoId;
     private String cpfAssociado;
     private String voto;
 
@@ -19,12 +18,12 @@ public class Voto {
         this.id = id;
     }
 
-    public SessaoVotacao getSessaoVotacao() {
-        return sessaoVotacao;
+    public String getSessaoId() {
+        return sessaoId;
     }
 
-    public void setSessaoVotacao(SessaoVotacao sessaoVotacao) {
-        this.sessaoVotacao = sessaoVotacao;
+    public void setSessaoId(String sessaoId) {
+        this.sessaoId = sessaoId;
     }
 
     public String getCpfAssociado() {
