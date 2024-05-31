@@ -5,7 +5,7 @@ import br.com.sicredi.desafio_rafael.application.core.domain.SessaoVotacao;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface SessaoVotacaoMapper {
+public interface SessaoVotacaoEntityMapper {
     SessaoVotacaoEntity toSessaoVotacaoEntity(SessaoVotacao sessaoVotacao);
     SessaoVotacao toSessaoVotacao(SessaoVotacaoEntity sessaoVotacaoEntity);
 }

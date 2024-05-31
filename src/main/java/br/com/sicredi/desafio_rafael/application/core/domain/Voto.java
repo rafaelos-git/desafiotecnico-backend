@@ -8,22 +8,38 @@ public class Voto {
     private String id;
     @DBRef
     private SessaoVotacao sessaoVotacao;
-    private String associadoId;
-    private boolean voto;
+    private String cpfAssociado;
+    private String voto;
 
-    public String getIdAssociado() {
-        return associadoId;
+    public String getId() {
+        return id;
     }
 
-    public void setIdAssociado(String associadoId) {
-        this.associadoId = associadoId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public boolean isVoto() {
+    public SessaoVotacao getSessaoVotacao() {
+        return sessaoVotacao;
+    }
+
+    public void setSessaoVotacao(SessaoVotacao sessaoVotacao) {
+        this.sessaoVotacao = sessaoVotacao;
+    }
+
+    public String getCpfAssociado() {
+        return cpfAssociado;
+    }
+
+    public void setCpfAssociado(String cpfAssociado) {
+        this.cpfAssociado = cpfAssociado;
+    }
+
+    public String getVoto() {
         return voto;
     }
 
-    public void setVoto(boolean voto) {
+    public void setVoto(String voto) {
         this.voto = voto;
     }
 }
