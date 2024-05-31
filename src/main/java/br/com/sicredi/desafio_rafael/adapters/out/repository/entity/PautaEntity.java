@@ -1,6 +1,5 @@
 package br.com.sicredi.desafio_rafael.adapters.out.repository.entity;
 
-import br.com.sicredi.desafio_rafael.application.core.domain.Voto;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

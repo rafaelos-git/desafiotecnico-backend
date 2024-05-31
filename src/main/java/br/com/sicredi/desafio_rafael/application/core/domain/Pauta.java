@@ -8,10 +8,6 @@ public class Pauta {
     private String nome;
     private String descricao;
 
-    public Pauta() {
-
-    }
-
     public String getId() {
         return id;
     }

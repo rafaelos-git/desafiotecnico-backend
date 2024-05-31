@@ -4,17 +4,26 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SessaoVotacao {
-    @Id
     private String id;
-    @DBRef
     private Pauta pauta;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
     private boolean encerrada;
     private List<Voto> votos;
+
+    public SessaoVotacao(){}
+
+    public SessaoVotacao(Pauta pauta, Integer duracaoEmMinutos) {
+        this.pauta = pauta;
+        this.dataInicio = LocalDateTime.now();
+        this.dataFim = LocalDateTime.now().plusMinutes(duracaoEmMinutos != null ? duracaoEmMinutos : 1);
+        this.encerrada = false;
+        this.votos = new ArrayList<>();
+    }
 
     public String getId() {
         return id;
@@ -62,5 +71,17 @@ public class SessaoVotacao {
 
     public void setVotos(List<Voto> votos) {
         this.votos = votos;
+    }
+
+    @Override
+    public String toString() {
+        return "SessaoVotacao{" +
+                "id='" + id + '\'' +
+                ", pauta=" + pauta +
+                ", dataInicio=" + dataInicio +
+                ", dataFim=" + dataFim +
+                ", encerrada=" + encerrada +
+                ", votos=" + votos +
+                '}';
     }
 }
