@@ -7,4 +7,5 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface SessaoVotacaoMapper {
     SessaoVotacaoEntity toSessaoVotacaoEntity(SessaoVotacao sessaoVotacao);
+    SessaoVotacao toSessaoVotacao(SessaoVotacaoEntity sessaoVotacaoEntity);
 }

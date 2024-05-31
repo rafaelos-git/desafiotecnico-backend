@@ -72,16 +72,4 @@ public class SessaoVotacao {
     public void setVotos(List<Voto> votos) {
         this.votos = votos;
     }
-
-    @Override
-    public String toString() {
-        return "SessaoVotacao{" +
-                "id='" + id + '\'' +
-                ", pauta=" + pauta +
-                ", dataInicio=" + dataInicio +
-                ", dataFim=" + dataFim +
-                ", encerrada=" + encerrada +
-                ", votos=" + votos +
-                '}';
-    }
 }

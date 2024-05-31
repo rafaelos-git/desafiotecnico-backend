@@ -27,7 +27,7 @@ public class PautaController {
     public ResponseEntity<Pauta> insert(@Valid @RequestBody PautaRequest pautaRequest) {
         var pauta = pautaMapper.toPauta(pautaRequest);
         insertPautaInputPort.insert(pauta);
-        return ResponseEntity.ok().body(pauta);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping("/{id}")

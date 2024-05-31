@@ -21,7 +21,6 @@ public class OpenSessaoVotacaoUseCase implements OpenSessaoVotacaoInputPort {
     public void open(String pautaId, Integer duracaoEmMinutos) {
         var pauta = findPautaByIdInputPort.find(pautaId);
         SessaoVotacao sessaoVotacao = new SessaoVotacao(pauta, duracaoEmMinutos);
-        System.out.println(sessaoVotacao);
         openSessaoVotacaoOutputPort.open(sessaoVotacao);
     }
 }

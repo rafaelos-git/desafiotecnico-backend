@@ -10,5 +10,6 @@ import org.mapstruct.Mapping;
 public interface PautaMapper {
     @Mapping(target = "id", ignore = true)
     Pauta toPauta(PautaRequest pautaRequest);
+
     PautaResponse toPautaResponse(Pauta pauta);
 }

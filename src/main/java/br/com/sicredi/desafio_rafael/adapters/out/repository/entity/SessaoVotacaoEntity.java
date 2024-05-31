@@ -19,12 +19,4 @@ public class SessaoVotacaoEntity {
     private LocalDateTime dataFim;
     private boolean encerrada;
     private List<Voto> votos;
-
-    public String mostrar() {
-        return "id = " + id
-                + "\npauta =" + pauta
-                + "\ndataInicio = " + dataInicio
-                + "\ndataFim = " + dataFim
-                + "\nencarrada = " + encerrada;
-    }
 }
