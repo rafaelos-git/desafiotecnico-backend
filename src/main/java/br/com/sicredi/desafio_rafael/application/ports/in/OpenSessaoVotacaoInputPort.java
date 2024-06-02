@@ -1,7 +1,7 @@
 package br.com.sicredi.desafio_rafael.application.ports.in;
 
-import br.com.sicredi.desafio_rafael.application.core.domain.SessaoVotacao;
+import br.com.sicredi.desafio_rafael.adapters.out.repository.entity.SessaoVotacaoEntity;
 
 public interface OpenSessaoVotacaoInputPort {
-    void open(String pautaId, Integer duracaoEmMinutos);
+    SessaoVotacaoEntity open(String pautaId, Integer duracaoEmMinutos);
 }

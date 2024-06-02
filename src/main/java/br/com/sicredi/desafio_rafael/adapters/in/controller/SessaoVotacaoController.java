@@ -2,6 +2,7 @@ package br.com.sicredi.desafio_rafael.adapters.in.controller;
 
 import br.com.sicredi.desafio_rafael.adapters.in.controller.request.SessaoVotacaoRequest;
 import br.com.sicredi.desafio_rafael.adapters.in.controller.request.VotoRequest;
+import br.com.sicredi.desafio_rafael.adapters.out.repository.entity.SessaoVotacaoEntity;
 import br.com.sicredi.desafio_rafael.application.ports.in.OpenSessaoVotacaoInputPort;
 import br.com.sicredi.desafio_rafael.application.ports.in.SendVotoInputPort;
 import jakarta.validation.Valid;
@@ -19,12 +20,12 @@ public class SessaoVotacaoController {
     private SendVotoInputPort sendVotoInputPort;
 
     @PostMapping
-    public ResponseEntity<Void> insert(@Valid @RequestBody SessaoVotacaoRequest sessaoVotacaoRequest) {
-        openSessaoVotacaoInputPort.open(
+    public ResponseEntity<SessaoVotacaoEntity> insert(@Valid @RequestBody SessaoVotacaoRequest sessaoVotacaoRequest) {
+        var sessaoVotacaoEntity = openSessaoVotacaoInputPort.open(
                 sessaoVotacaoRequest.getPautaId(),
                 sessaoVotacaoRequest.getDuracaoEmMinutos()
         );
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok().body(sessaoVotacaoEntity);
     }
 
     @PostMapping("/{sessaoId}/votar")

@@ -1,6 +1,7 @@
 package br.com.sicredi.desafio_rafael.adapters.out;
 
 import br.com.sicredi.desafio_rafael.adapters.out.repository.SessaoVotacaoRepository;
+import br.com.sicredi.desafio_rafael.adapters.out.repository.entity.SessaoVotacaoEntity;
 import br.com.sicredi.desafio_rafael.adapters.out.repository.mapper.SessaoVotacaoEntityMapper;
 import br.com.sicredi.desafio_rafael.application.core.domain.SessaoVotacao;
 import br.com.sicredi.desafio_rafael.application.ports.out.OpenSessaoVotacaoOutputPort;
@@ -16,8 +17,8 @@ public class OpenSessaoVotacaoAdapter implements OpenSessaoVotacaoOutputPort {
     private SessaoVotacaoEntityMapper sessaoVotacaoEntityMapper;
 
     @Override
-    public void open(SessaoVotacao sessaoVotacao) {
+    public SessaoVotacaoEntity open(SessaoVotacao sessaoVotacao) {
         var sessaoVotacaoEntity = sessaoVotacaoEntityMapper.toSessaoVotacaoEntity(sessaoVotacao);
-        sessaoVotacaoRepository.insert(sessaoVotacaoEntity);
+        return sessaoVotacaoRepository.insert(sessaoVotacaoEntity);
     }
 }

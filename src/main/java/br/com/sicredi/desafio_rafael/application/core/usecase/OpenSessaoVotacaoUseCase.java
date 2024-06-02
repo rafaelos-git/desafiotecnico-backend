@@ -1,5 +1,6 @@
 package br.com.sicredi.desafio_rafael.application.core.usecase;
 
+import br.com.sicredi.desafio_rafael.adapters.out.repository.entity.SessaoVotacaoEntity;
 import br.com.sicredi.desafio_rafael.application.core.domain.SessaoVotacao;
 import br.com.sicredi.desafio_rafael.application.ports.in.FindPautaByIdInputPort;
 import br.com.sicredi.desafio_rafael.application.ports.in.OpenSessaoVotacaoInputPort;
@@ -18,9 +19,9 @@ public class OpenSessaoVotacaoUseCase implements OpenSessaoVotacaoInputPort {
     }
 
     @Override
-    public void open(String pautaId, Integer duracaoEmMinutos) {
+    public SessaoVotacaoEntity open(String pautaId, Integer duracaoEmMinutos) {
         var pauta = findPautaByIdInputPort.find(pautaId);
         SessaoVotacao sessaoVotacao = new SessaoVotacao(pauta, duracaoEmMinutos);
-        openSessaoVotacaoOutputPort.open(sessaoVotacao);
+        return openSessaoVotacaoOutputPort.open(sessaoVotacao);
     }
 }

@@ -1,6 +1,7 @@
 package br.com.sicredi.desafio_rafael.adapters.out;
 
 import br.com.sicredi.desafio_rafael.adapters.out.repository.PautaRepository;
+import br.com.sicredi.desafio_rafael.adapters.out.repository.entity.PautaEntity;
 import br.com.sicredi.desafio_rafael.adapters.out.repository.mapper.PautaEntityMapper;
 import br.com.sicredi.desafio_rafael.application.core.domain.Pauta;
 import br.com.sicredi.desafio_rafael.application.ports.out.InsertPautaOutputPort;
@@ -16,8 +17,8 @@ public class InsertPautaAdapter implements InsertPautaOutputPort {
     private PautaEntityMapper pautaEntityMapper;
 
     @Override
-    public void insert(Pauta pauta) {
+    public PautaEntity insert(Pauta pauta) {
         var pautaEntity = pautaEntityMapper.toPautaEntity(pauta);
-        pautaRepository.insert(pautaEntity);
+        return pautaRepository.insert(pautaEntity);
     }
 }

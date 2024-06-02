@@ -3,7 +3,7 @@ package br.com.sicredi.desafio_rafael.adapters.in.controller;
 import br.com.sicredi.desafio_rafael.adapters.in.controller.mapper.PautaMapper;
 import br.com.sicredi.desafio_rafael.adapters.in.controller.request.PautaRequest;
 import br.com.sicredi.desafio_rafael.adapters.in.controller.response.PautaResponse;
-import br.com.sicredi.desafio_rafael.application.core.domain.Pauta;
+import br.com.sicredi.desafio_rafael.adapters.out.repository.entity.PautaEntity;
 import br.com.sicredi.desafio_rafael.application.ports.in.FindPautaByIdInputPort;
 import br.com.sicredi.desafio_rafael.application.ports.in.InsertPautaInputPort;
 import jakarta.validation.Valid;
@@ -24,10 +24,10 @@ public class PautaController {
     private FindPautaByIdInputPort findPautaByIdInputPort;
 
     @PostMapping
-    public ResponseEntity<Pauta> insert(@Valid @RequestBody PautaRequest pautaRequest) {
+    public ResponseEntity<PautaEntity> insert(@Valid @RequestBody PautaRequest pautaRequest) {
         var pauta = pautaMapper.toPauta(pautaRequest);
-        insertPautaInputPort.insert(pauta);
-        return ResponseEntity.ok().build();
+        var pautaEntity = insertPautaInputPort.insert(pauta);
+        return ResponseEntity.ok().body(pautaEntity);
     }
 
     @GetMapping("/{id}")
