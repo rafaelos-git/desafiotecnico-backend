@@ -41,4 +41,14 @@ public class Voto {
     public void setVoto(String voto) {
         this.voto = voto;
     }
+
+    @Override
+    public String toString() {
+        return "Voto{" +
+                "id='" + id + '\'' +
+                ", sessaoId='" + sessaoId + '\'' +
+                ", cpfAssociado='" + cpfAssociado + '\'' +
+                ", voto='" + voto + '\'' +
+                '}';
+    }
 }

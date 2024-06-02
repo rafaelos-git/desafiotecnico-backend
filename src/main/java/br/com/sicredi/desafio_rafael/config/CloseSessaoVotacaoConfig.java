@@ -2,6 +2,7 @@ package br.com.sicredi.desafio_rafael.config;
 
 import br.com.sicredi.desafio_rafael.adapters.out.CloseSessaoVotacaoAdapter;
 import br.com.sicredi.desafio_rafael.adapters.out.FindSessoesExpiradasAdapter;
+import br.com.sicredi.desafio_rafael.adapters.out.SendResultadoSessaoVotacaoToKafkaAdapter;
 import br.com.sicredi.desafio_rafael.application.core.usecase.CloseSessaoVotacaoUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,11 +14,13 @@ public class CloseSessaoVotacaoConfig {
     @Bean
     public CloseSessaoVotacaoUseCase closeSessaoVotacaoUseCase(
             FindSessoesExpiradasAdapter findSessoesExpiradasAdapter,
-            CloseSessaoVotacaoAdapter closeSessaoVotacaoAdapter
+            CloseSessaoVotacaoAdapter closeSessaoVotacaoAdapter,
+            SendResultadoSessaoVotacaoToKafkaAdapter sendResultadoSessaoVotacaoToKafkaAdapter
     ) {
         return new CloseSessaoVotacaoUseCase(
                 findSessoesExpiradasAdapter,
-                closeSessaoVotacaoAdapter
+                closeSessaoVotacaoAdapter,
+                sendResultadoSessaoVotacaoToKafkaAdapter
         );
     }
 
