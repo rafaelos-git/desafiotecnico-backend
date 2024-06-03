@@ -157,7 +157,7 @@ As seguintes tarefas bônus foram implementadas:
 
 4. **Versionamento da API**: Foi implementado o versionamento da API para garantir compatibilidade com clientes existentes. O versionamento é realizado através de prefixos de URL, por exemplo, `/api/v1`.
 
-# Atenção
+## Atenção
 
 As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão comentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados. Para ativar esta validação, basta descomentar essas linhas no código-fonte.
 
