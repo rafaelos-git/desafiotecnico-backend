@@ -64,7 +64,14 @@ docker-compose up
 gradle bootRun
 ```
 
-7. A aplicação estará disponível em `http://localhost:8080`.
+7. A aplicação estará disponível em `http://localhost:8081`.
+
+## Aplicação Rodando na Nuvem AWS
+
+Esta aplicação está atualmente hospedada na nuvem AWS e está disponível no seguinte endereço:
+
+[ec2-184-72-163-91.compute-1.amazonaws.com:8081](http://ec2-184-72-163-91.compute-1.amazonaws.com:8081)
+
 
 ## Documentação da API
 
@@ -145,6 +152,11 @@ gradle bootRun
 As seguintes tarefas bônus foram implementadas:
 
 1. **Integração com sistemas externos**: Foi implementada a integração com um sistema externo para verificação de CPFs dos associados, garantindo que apenas associados válidos possam votar.
+
+## Atenção
+
+As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão comentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados. Para ativar esta validação, basta descomentar essas linhas no código-fonte.
+
 
 2. **Mensageria e filas**: Foi implementada a utilização de mensageria e filas para comunicação entre os componentes da aplicação. Quando a sessão de votação é encerrada, uma mensagem com o resultado da votação é postada em uma fila.
 
