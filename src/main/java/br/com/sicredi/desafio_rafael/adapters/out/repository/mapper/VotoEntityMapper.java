@@ -7,4 +7,5 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface VotoEntityMapper {
     VotoEntity toVotoEntity(Voto voto);
+    Voto toVoto(VotoEntity votoEntity);
 }

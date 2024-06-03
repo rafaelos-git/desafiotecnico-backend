@@ -1,12 +1,11 @@
 package br.com.sicredi.desafio_rafael.application.core.domain;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 
 public class Voto {
     @Id
     private String id;
-    private String sessaoId;
+    private String pautaId;
     private String cpfAssociado;
     private String voto;
 
@@ -18,12 +17,12 @@ public class Voto {
         this.id = id;
     }
 
-    public String getSessaoId() {
-        return sessaoId;
+    public String getPautaId() {
+        return pautaId;
     }
 
-    public void setSessaoId(String sessaoId) {
-        this.sessaoId = sessaoId;
+    public void setPautaId(String pautaId) {
+        this.pautaId = pautaId;
     }
 
     public String getCpfAssociado() {
@@ -44,11 +43,11 @@ public class Voto {
 
     @Override
     public String toString() {
-        return "Voto{" +
-                "id='" + id + '\'' +
-                ", sessaoId='" + sessaoId + '\'' +
-                ", cpfAssociado='" + cpfAssociado + '\'' +
-                ", voto='" + voto + '\'' +
-                '}';
+        return "{" +
+                "\"id\": \"" + id + "\"," +
+                "\"pautaId\": \"" + pautaId + "\"," +
+                "\"cpfAssociado\": \"" + cpfAssociado + "\"," +
+                "\"voto\": \"" + voto + "\"" +
+                "}";
     }
 }

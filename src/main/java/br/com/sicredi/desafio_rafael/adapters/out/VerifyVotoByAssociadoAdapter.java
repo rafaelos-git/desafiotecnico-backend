@@ -12,7 +12,7 @@ public class VerifyVotoByAssociadoAdapter implements VerifyVotoByAssociadoOutput
     private VotoRepository votoRepository;
 
     @Override
-    public boolean find(String sessaoId, String cpfAssociado) {
-        return votoRepository.existsBySessaoIdAndCpfAssociado(sessaoId, cpfAssociado);
+    public boolean find(String pautaId, String cpfAssociado) {
+        return votoRepository.existsByPautaIdAndCpfAssociado(pautaId, cpfAssociado);
     }
 }

@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class VotoEntity {
     @Id
     private String id;
-    private String sessaoId;
+    private String pautaId;
     private String cpfAssociado;
     private String voto;
 }

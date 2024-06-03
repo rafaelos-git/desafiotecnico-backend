@@ -1,8 +1,5 @@
 package br.com.sicredi.desafio_rafael.application.core.domain;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -75,13 +72,13 @@ public class SessaoVotacao {
 
     @Override
     public String toString() {
-        return "SessaoVotacao{" +
-                "id='" + id + '\'' +
-                ", pauta=" + pauta +
-                ", dataInicio=" + dataInicio +
-                ", dataFim=" + dataFim +
-                ", encerrada=" + encerrada +
-                ", votos=" + votos +
-                '}';
+        return "{" +
+                "\"id\": \"" + id + "\"," +
+                "\"pauta\": \"" + pauta + "\"," +
+                "\"dataInicio\": \"" + dataInicio + "\"," +
+                "\"dataFim\": \"" + dataFim + "\"," +
+                "\"encerrada\": " + encerrada + "," +
+                "\"votos\": " + votos +
+                "}";
     }
 }

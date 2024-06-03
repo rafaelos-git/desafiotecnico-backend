@@ -1,8 +1,5 @@
 package br.com.sicredi.desafio_rafael.application.core.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Pauta {
     private String id;
     private String nome;
@@ -34,10 +31,10 @@ public class Pauta {
 
     @Override
     public String toString() {
-        return "Pauta{" +
-                "id='" + id + '\'' +
-                ", nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                '}';
+        return "{" +
+                "\"id\": \"" + id + "\"," +
+                "\"nome\": \"" + nome + "\"," +
+                "\"descricao\": \"" + descricao + "\"" +
+                "}";
     }
 }
