@@ -152,4 +152,4 @@ As seguintes tarefas bônus foram implementadas:
 
 ## Rafael Oliveira Silva
 
-- GitHub: [rafaelos-git]([https://github.com/rafa](https://github.com/rafaelos-git/desafiotecnico-backend))
+- GitHub: [rafaelos-git](https://github.com/rafaelos-git)
