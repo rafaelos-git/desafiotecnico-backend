@@ -158,7 +158,7 @@ As seguintes tarefas bônus foram implementadas:
 
 ## Atenção
 
-As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão comentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados. Para ativar esta validação, basta descomentar essas linhas no código-fonte.
+As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão descomentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados, e essa API está sempre retornando 404 no momento (está aparentemente desligada). Para desativar esta validação, basta comentar essas linhas no código-fonte.
 
 ## Rafael Oliveira Silva
 
