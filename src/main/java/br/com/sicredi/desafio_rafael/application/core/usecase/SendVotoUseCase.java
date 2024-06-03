@@ -38,9 +38,9 @@ public class SendVotoUseCase implements SendVotoInputPort {
         if (verifyVotoByAssociadoOutputPort.find(sessaoVotacao.getPauta().getId(), cpfAssociado)) {
             throw new RuntimeException("Associado ja votou nesta pauta");
         }
-//        if (Objects.equals(sendCpfForValidationOutputPort.send(cpfAssociado), "UNABLE_TO_VOTE")) {
-//            throw new RuntimeException("Associado nao pode votar");
-//        }
+        if (Objects.equals(sendCpfForValidationOutputPort.send(cpfAssociado), "UNABLE_TO_VOTE")) {
+            throw new RuntimeException("Associado nao pode votar");
+        }
         Voto novoVoto = new Voto();
         novoVoto.setPautaId(sessaoVotacao.getPauta().getId());
         novoVoto.setCpfAssociado(cpfAssociado);
