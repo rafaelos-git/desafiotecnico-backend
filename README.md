@@ -70,7 +70,7 @@ gradle bootRun
 
 Esta aplicação está atualmente hospedada na nuvem AWS e está disponível no seguinte endereço:
 
-[ec2-184-72-163-91.compute-1.amazonaws.com:8081](http://ec2-184-72-163-91.compute-1.amazonaws.com:8081)
+[ec2-54-242-56-103.compute-1.amazonaws.com:8081](http://ec2-54-242-56-103.compute-1.amazonaws.com:8081)
 
 ## Documentação da API
 
