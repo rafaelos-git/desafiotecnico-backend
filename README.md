@@ -72,7 +72,6 @@ Esta aplicação está atualmente hospedada na nuvem AWS e está disponível no 
 
 [ec2-184-72-163-91.compute-1.amazonaws.com:8081](http://ec2-184-72-163-91.compute-1.amazonaws.com:8081)
 
-
 ## Documentação da API
 
 ### Cadastro de Pauta
