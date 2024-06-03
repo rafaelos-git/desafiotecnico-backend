@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/sessoes")
+@RequestMapping("/api/v1/sessoes")
 public class SessaoVotacaoController {
     @Autowired
     private OpenSessaoVotacaoInputPort openSessaoVotacaoInputPort;

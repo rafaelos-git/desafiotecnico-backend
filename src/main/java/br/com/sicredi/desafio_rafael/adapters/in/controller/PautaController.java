@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/pautas")
+@RequestMapping("/api/v1/pautas")
 public class PautaController {
     @Autowired
     private InsertPautaInputPort insertPautaInputPort;
