@@ -64,7 +64,13 @@ docker-compose up
 gradle bootRun
 ```
 
-7. A aplicação estará disponível em `http://localhost:8080`.
+7. A aplicação estará disponível em `http://localhost:8081`.
+
+## Aplicação Rodando na Nuvem AWS
+
+Esta aplicação está atualmente hospedada na nuvem AWS e está disponível no seguinte endereço:
+
+[ec2-184-72-163-91.compute-1.amazonaws.com:8081](http://ec2-184-72-163-91.compute-1.amazonaws.com:8081)
 
 ## Documentação da API
 
@@ -150,6 +156,10 @@ As seguintes tarefas bônus foram implementadas:
 
 4. **Versionamento da API**: Foi implementado o versionamento da API para garantir compatibilidade com clientes existentes. O versionamento é realizado através de prefixos de URL, por exemplo, `/api/v1`.
 
+## Atenção
+
+As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão comentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados. Para ativar esta validação, basta descomentar essas linhas no código-fonte.
+
 ## Rafael Oliveira Silva
 
-- GitHub: [rafaelos-git]([https://github.com/rafa](https://github.com/rafaelos-git/desafiotecnico-backend))
+- GitHub: [rafaelos-git](https://github.com/rafaelos-git)

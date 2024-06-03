@@ -9,4 +9,4 @@ spring:
       authentication-database: admin
       username: root
       password: example
-      database: pautas
+      database: sicredi
