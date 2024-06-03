@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 public class VotoRequest {
-    @NotBlank
+    @NotBlank(message = "O CPF do associado e obrigatorio.")
     String cpfAssociado;
-    @NotBlank
+    @NotBlank(message = "O voto e obrigatorio.")
     String voto;
 }

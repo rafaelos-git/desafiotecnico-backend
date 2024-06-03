@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 public class PautaRequest {
-    @NotBlank
+    @NotBlank(message = "A pauta deve ter um nome.")
     private String nome;
-    @NotBlank
+    @NotBlank(message = "A pauta deve ter uma descricao.")
     private String descricao;
 }
