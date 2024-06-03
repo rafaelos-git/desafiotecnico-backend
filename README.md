@@ -153,14 +153,13 @@ As seguintes tarefas bônus foram implementadas:
 
 1. **Integração com sistemas externos**: Foi implementada a integração com um sistema externo para verificação de CPFs dos associados, garantindo que apenas associados válidos possam votar.
 
-## Atenção
-
-As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão comentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados. Para ativar esta validação, basta descomentar essas linhas no código-fonte.
-
-
 2. **Mensageria e filas**: Foi implementada a utilização de mensageria e filas para comunicação entre os componentes da aplicação. Quando a sessão de votação é encerrada, uma mensagem com o resultado da votação é postada em uma fila.
 
 4. **Versionamento da API**: Foi implementado o versionamento da API para garantir compatibilidade com clientes existentes. O versionamento é realizado através de prefixos de URL, por exemplo, `/api/v1`.
+
+# Atenção
+
+As linhas 41, 42 e 43 do arquivo `SendVotoUseCase.java` estão comentadas por padrão. Estas linhas são responsáveis por ativar a validação via API externa para verificação dos CPFs dos associados. Para ativar esta validação, basta descomentar essas linhas no código-fonte.
 
 ## Rafael Oliveira Silva
 
